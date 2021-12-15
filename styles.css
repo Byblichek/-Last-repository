@@ -1,22 +1,23 @@
 body {
     margin: 0;
+    padding: 0;
 }
 
 .menu{
-    min-width: 100px;
-    max-width: 3840px;
     width: 100%;
     height: 100px;
     display: flex;
     background-color: black;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 .nash-list {
     display: flex;
     list-style: none;
     font-size: 23px;
+    margin: 0;
 }
 
 .nash-list li {
@@ -32,7 +33,12 @@ body {
     height: 70;
 }
 
-.number {
+.number{
+    min-width: 200px;
+    font-size: 23px;
+}
+
+.num{
     width: 20px;
     height: 20px;
 }
@@ -52,16 +58,23 @@ a {
 }
 
 li:before {
-    content: '';
+    content: '○';
     display: flex;
-    width: 4px;
-    height: 4px;
-    border-radius: 7.5px;
-    background-color: white;
+    color: white;
+    font-size: 9px;
 } 
 
+li:first-child:before{
+    content: '';
+}
+
+li:last-child:before{
+    content: '';
+}
+
 .phon{
+    display: flex;
     width: 100%;
-    height: 70%;
+    height: 50%;
     object-fit: cover;
 }
